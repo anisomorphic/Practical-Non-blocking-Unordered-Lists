@@ -1,9 +1,10 @@
 # Practical-Non-blocking-Unordered-Lists
-Practical Non-blocking Unordered Lists
+A Java based highly-concurrent linked list algorithm 
+based on work by Zhang, Et Al.
 
-Michael Harris, Marcus Sooter
-{mmph87,mdsooter}@Knights.ucf.edu
+by Michael Harris, Marcus Sooter
 
+{mmph87,mdsooter}(at)Knights.ucf.edu
 University of Central Florida
 
 
