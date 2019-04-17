@@ -3,13 +3,14 @@
 
 ### by Michael Harris, Marcus Sooter
 
-#### University of Central Florida
+University of Central Florida
 
 
 This is our semester project for Dr. Dechev's COP4520 multicore programming class.
 
 Each directory contains a different version of the program with straightforward
 instructions inside 'Read Me.txt' to run and execute the source code in Java.
+
 
 The STM versions of the code require use of DeuceSTM 1.2, which can be found at this link:
 
