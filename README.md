@@ -3,8 +3,7 @@ A Java based highly-concurrent linked list algorithm
 based on work by Zhang, Et Al.
 
 by Michael Harris, Marcus Sooter
-{mmph87,mdsooter}(at)Knights.ucf.edu
-
+[mmph87,mdsooter](at)Knights.ucf.edu
 University of Central Florida
 
 
