@@ -1,9 +1,9 @@
 # Practical-Non-blocking-Unordered-Lists
-##A Java based highly-concurrent linked list algorithm based on work by Zhang, Et Al.
+##### A Java based highly-concurrent linked list algorithm based on work by Zhang, Et Al.
 
-###by Michael Harris, Marcus Sooter
+### by Michael Harris, Marcus Sooter
 
-###University of Central Florida
+#### University of Central Florida
 
 
 This is our semester project for Dr. Dechev's COP4520 multicore programming class.
