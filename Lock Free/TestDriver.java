@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * 3.0 - AtomicFieldUpdaters, using int to represent state, no open issues. Lock-free enlist
+ * 3.1 - AtomicFieldUpdaters, using int to represent state, no open issues. Lock-free enlist
  * @authors Marcus Sooter, Michael Harris
  */
 
@@ -161,15 +161,15 @@ public class TestDriver {
         // this ensures we are always testing new values, and not repeated values
         int testingValue = 1;
         
-        s.enlist(new Node(2, 0, null, null, Thread.currentThread().getId()));
-        if (!s.contains(2)) {
+        s.enlist(new Node(212121, 0, null, null, Thread.currentThread().getId()));
+        if (!s.contains(212121)) {
             nobugs = false;
             System.out.println("contains failed unit test 1 - contains doesn't detect enlisted node");
         }
 
         
-        s.enlist(new Node(64, 0, null, null, Thread.currentThread().getId()));
-        if (!s.contains(64)) {
+        s.enlist(new Node(646464, 0, null, null, Thread.currentThread().getId()));
+        if (!s.contains(646464)) {
             nobugs = false;
             System.out.println("contains failed unit test 2 - contains detects deleted node");
         }
@@ -181,19 +181,18 @@ public class TestDriver {
         }
 
         
-        s.remove(64);
-        if (s.contains(64)) {
+        s.remove(646464);
+        if (s.contains(646464)) {
             nobugs = false;
             System.out.println("remove failed unit test 4 - remove failure");
         }
 
         
-        s.remove(2);
-        if (s.contains(2)) {
+        s.remove(212121);
+        if (s.contains(212121)) {
             nobugs = false;
             System.out.println("remove failed unit test 5 - remove failure");
         }
-
 
         
         
