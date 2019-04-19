@@ -1,1 +1,16 @@
-.
+Practical Non-blocking Unordered Lists
+by Marcus Sooter and Michael Harris
+
+Software Transactional Memory version of Lock-Free Linked List in Java
+using DeuceSTM 1.2, credit to Guy Korland
+
+Due to the potential difficulties involved with testing this package, and the integrated
+compile time library deuce, provided as a jar, this version of the program is provided
+both as raw source, and as a convenient NetBeans 8.2 project, provided as a .zip project file.
+
+You can easily add deuce in the IDE of your choice by importing the .jar file provided
+as a compile-time library, or by importing and running the provided .zip as a NetBeans project.
+
+Please contact mmph87@Knights.ucf.edu for any support with the STM version of this List.
+  
+Verbose benchmarking is on by default and will display information on the terminal window.
