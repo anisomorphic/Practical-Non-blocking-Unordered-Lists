@@ -1,0 +1,256 @@
+Lock-Free with Atomicity
+
+run:
+all unit tests pass
+Initiating test 1: threads: 1, keysize: 512, lookup ratio: 0%, with 5000000 operations.
+7216ms
+ops/ms: 693
+
+Initiating test 2: threads: 2, keysize: 512, lookup ratio: 0%, with 5000000 operations.
+3855ms
+ops/ms: 1298
+
+Initiating test 3: threads: 4, keysize: 512, lookup ratio: 0%, with 5000000 operations.
+2401ms
+ops/ms: 2186
+
+Initiating test 4: threads: 8, keysize: 512, lookup ratio: 0%, with 5000000 operations.
+1616ms
+ops/ms: 3117
+
+Initiating test 5: threads: 16, keysize: 512, lookup ratio: 0%, with 5000000 operations.
+1650ms
+ops/ms: 3506
+
+Initiating test 6: threads: 32, keysize: 512, lookup ratio: 0%, with 5000000 operations.
+1704ms
+ops/ms: 3263
+
+Initiating test 7: threads: 64, keysize: 512, lookup ratio: 0%, with 5000000 operations.
+1714ms
+ops/ms: 5800
+
+Initiating test 8: threads: 1, keysize: 1000, lookup ratio: 0%, with 5000000 operations.
+13647ms
+ops/ms: 366
+
+Initiating test 9: threads: 2, keysize: 1000, lookup ratio: 0%, with 5000000 operations.
+7361ms
+ops/ms: 679
+
+Initiating test 10: threads: 4, keysize: 1000, lookup ratio: 0%, with 5000000 operations.
+4513ms
+ops/ms: 1160
+
+Initiating test 11: threads: 8, keysize: 1000, lookup ratio: 0%, with 5000000 operations.
+2879ms
+ops/ms: 1739
+
+Initiating test 12: threads: 16, keysize: 1000, lookup ratio: 0%, with 5000000 operations.
+2928ms
+ops/ms: 1824
+
+Initiating test 13: threads: 32, keysize: 1000, lookup ratio: 0%, with 5000000 operations.
+3007ms
+ops/ms: 1848
+
+Initiating test 14: threads: 64, keysize: 1000, lookup ratio: 0%, with 5000000 operations.
+3086ms
+ops/ms: 2107
+
+Initiating test 15: threads: 1, keysize: 2000, lookup ratio: 0%, with 5000000 operations.
+28500ms
+ops/ms: 175
+
+Initiating test 16: threads: 2, keysize: 2000, lookup ratio: 0%, with 5000000 operations.
+14728ms
+ops/ms: 339
+
+Initiating test 17: threads: 4, keysize: 2000, lookup ratio: 0%, with 5000000 operations.
+8624ms
+ops/ms: 587
+
+Initiating test 18: threads: 8, keysize: 2000, lookup ratio: 0%, with 5000000 operations.
+5547ms
+ops/ms: 905
+
+Initiating test 19: threads: 16, keysize: 2000, lookup ratio: 0%, with 5000000 operations.
+5644ms
+ops/ms: 953
+
+Initiating test 20: threads: 32, keysize: 2000, lookup ratio: 0%, with 5000000 operations.
+5629ms
+ops/ms: 1021
+
+Initiating test 21: threads: 64, keysize: 2000, lookup ratio: 0%, with 5000000 operations.
+5739ms
+ops/ms: 1072
+
+Initiating test 22: threads: 1, keysize: 512, lookup ratio: 34%, with 5000000 operations.
+5713ms
+ops/ms: 875
+
+Initiating test 23: threads: 2, keysize: 512, lookup ratio: 34%, with 5000000 operations.
+3102ms
+ops/ms: 1612
+
+Initiating test 24: threads: 4, keysize: 512, lookup ratio: 34%, with 5000000 operations.
+1875ms
+ops/ms: 2715
+
+Initiating test 25: threads: 8, keysize: 512, lookup ratio: 34%, with 5000000 operations.
+1172ms
+ops/ms: 4302
+
+Initiating test 26: threads: 16, keysize: 512, lookup ratio: 34%, with 5000000 operations.
+1222ms
+ops/ms: 4757
+
+Initiating test 27: threads: 32, keysize: 512, lookup ratio: 34%, with 5000000 operations.
+1230ms
+ops/ms: 5241
+
+Initiating test 28: threads: 64, keysize: 512, lookup ratio: 34%, with 5000000 operations.
+1277ms
+ops/ms: 6134
+
+Initiating test 29: threads: 1, keysize: 1000, lookup ratio: 34%, with 5000000 operations.
+12327ms
+ops/ms: 405
+
+Initiating test 30: threads: 2, keysize: 1000, lookup ratio: 34%, with 5000000 operations.
+6565ms
+ops/ms: 762
+
+Initiating test 31: threads: 4, keysize: 1000, lookup ratio: 34%, with 5000000 operations.
+3675ms
+ops/ms: 1374
+
+Initiating test 32: threads: 8, keysize: 1000, lookup ratio: 34%, with 5000000 operations.
+2207ms
+ops/ms: 2290
+
+Initiating test 33: threads: 16, keysize: 1000, lookup ratio: 34%, with 5000000 operations.
+2218ms
+ops/ms: 2464
+
+Initiating test 34: threads: 32, keysize: 1000, lookup ratio: 34%, with 5000000 operations.
+2253ms
+ops/ms: 2505
+
+Initiating test 35: threads: 64, keysize: 1000, lookup ratio: 34%, with 5000000 operations.
+2303ms
+ops/ms: 2988
+
+Initiating test 36: threads: 1, keysize: 2000, lookup ratio: 34%, with 5000000 operations.
+26686ms
+ops/ms: 187
+
+Initiating test 37: threads: 2, keysize: 2000, lookup ratio: 34%, with 5000000 operations.
+13786ms
+ops/ms: 363
+
+Initiating test 38: threads: 4, keysize: 2000, lookup ratio: 34%, with 5000000 operations.
+7485ms
+ops/ms: 669
+
+Initiating test 39: threads: 8, keysize: 2000, lookup ratio: 34%, with 5000000 operations.
+4454ms
+ops/ms: 1129
+
+Initiating test 40: threads: 16, keysize: 2000, lookup ratio: 34%, with 5000000 operations.
+4575ms
+ops/ms: 1157
+
+Initiating test 41: threads: 32, keysize: 2000, lookup ratio: 34%, with 5000000 operations.
+4465ms
+ops/ms: 1212
+
+Initiating test 42: threads: 64, keysize: 2000, lookup ratio: 34%, with 5000000 operations.
+4501ms
+ops/ms: 1258
+
+Initiating test 43: threads: 1, keysize: 512, lookup ratio: 100%, with 5000000 operations.
+3192ms
+ops/ms: 1566
+
+Initiating test 44: threads: 2, keysize: 512, lookup ratio: 100%, with 5000000 operations.
+1683ms
+ops/ms: 2976
+
+Initiating test 45: threads: 4, keysize: 512, lookup ratio: 100%, with 5000000 operations.
+866ms
+ops/ms: 5854
+
+Initiating test 46: threads: 8, keysize: 512, lookup ratio: 100%, with 5000000 operations.
+498ms
+ops/ms: 10869
+
+Initiating test 47: threads: 16, keysize: 512, lookup ratio: 100%, with 5000000 operations.
+536ms
+ops/ms: 13927
+
+Initiating test 48: threads: 32, keysize: 512, lookup ratio: 100%, with 5000000 operations.
+391ms
+ops/ms: 32679
+
+Initiating test 49: threads: 64, keysize: 512, lookup ratio: 100%, with 5000000 operations.
+521ms
+ops/ms: 72463
+
+Initiating test 50: threads: 1, keysize: 1000, lookup ratio: 100%, with 5000000 operations.
+11169ms
+ops/ms: 447
+
+Initiating test 51: threads: 2, keysize: 1000, lookup ratio: 100%, with 5000000 operations.
+5241ms
+ops/ms: 954
+
+Initiating test 52: threads: 4, keysize: 1000, lookup ratio: 100%, with 5000000 operations.
+2523ms
+ops/ms: 1988
+
+Initiating test 53: threads: 8, keysize: 1000, lookup ratio: 100%, with 5000000 operations.
+1313ms
+ops/ms: 3843
+
+Initiating test 54: threads: 16, keysize: 1000, lookup ratio: 100%, with 5000000 operations.
+1413ms
+ops/ms: 4512
+
+Initiating test 55: threads: 32, keysize: 1000, lookup ratio: 100%, with 5000000 operations.
+1006ms
+ops/ms: 10989
+
+Initiating test 56: threads: 64, keysize: 1000, lookup ratio: 100%, with 5000000 operations.
+1345ms
+ops/ms: 17921
+
+Initiating test 57: threads: 1, keysize: 2000, lookup ratio: 100%, with 5000000 operations.
+21537ms
+ops/ms: 232
+
+Initiating test 58: threads: 2, keysize: 2000, lookup ratio: 100%, with 5000000 operations.
+12423ms
+ops/ms: 402
+
+Initiating test 59: threads: 4, keysize: 2000, lookup ratio: 100%, with 5000000 operations.
+6017ms
+ops/ms: 831
+
+Initiating test 60: threads: 8, keysize: 2000, lookup ratio: 100%, with 5000000 operations.
+2956ms
+ops/ms: 1712
+
+Initiating test 61: threads: 16, keysize: 2000, lookup ratio: 100%, with 5000000 operations.
+2392ms
+ops/ms: 2308
+
+Initiating test 62: threads: 32, keysize: 2000, lookup ratio: 100%, with 5000000 operations.
+3169ms
+ops/ms: 3538
+
+Initiating test 63: threads: 64, keysize: 2000, lookup ratio: 100%, with 5000000 operations.
+2242ms
+ops/ms: 9157
+BUILD SUCCESSFUL (total time: 5 minutes 34 seconds)
