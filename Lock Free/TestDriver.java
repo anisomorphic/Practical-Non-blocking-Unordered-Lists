@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * 3.1 - AtomicFieldUpdaters, using int to represent state, no open issues. Lock-free enlist
+ * Driver version 4.0, Lock-Free version 3.0
  * @authors Marcus Sooter, Michael Harris
  */
 
@@ -234,78 +234,26 @@ public class TestDriver {
     //for the parameters -> (a, b, c, 5mil) | a = 1, 2, 4, 8; b = 512, 1000, 2000; c = 0, 34, 100
     //(adding, threads for 16, 32, 64 threads)
     public void benchmark(boolean b) {
-        int count = 1;
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 1, 512, 0, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 2, 512, 0, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 4, 512, 0, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 8, 512, 0, 5000000);
-        System.out.println("\nstarting test " + count++); this.threadTester(b, 16, 512, 0, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 32, 512, 0, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 64, 512, 0, 5000000);
-    	
-        System.out.println("\nstarting test " + count++); this.threadTester(b, 1, 1000, 0, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 2, 1000, 0, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 4, 1000, 0, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 8, 1000, 0, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 16, 1000, 0, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 32, 1000, 0, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 64, 1000, 0, 5000000);
-    	
-        System.out.println("\nstarting test " + count++); this.threadTester(b, 1, 2000, 0, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 2, 2000, 0, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 4, 2000, 0, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 8, 2000, 0, 5000000);
-        System.out.println("\nstarting test " + count++); this.threadTester(b, 16, 2000, 0, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 32, 2000, 0, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 64, 2000, 0, 5000000);
+        int count=1, x, y, z, numOps=5000000;
         
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 1, 512, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 2, 512, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 4, 512, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 8, 512, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 16, 512, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 32, 512, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 64, 512, 34, 5000000);
+        int[] threads = new int[]{1,2,4,8,16,32,64};
+        int[] keysize = new int[]{512,1000,2000};
+        int[] lookup = new int[]{0,34,100};
         
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 1, 1000, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 2, 1000, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 4, 1000, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 8, 1000, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 16, 1000, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 32, 1000, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 64, 1000, 34, 5000000);
+        int tlist_size = threads.length;
+        int klist_size = keysize.length;
+        int llist_size = lookup.length;
         
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 1, 2000, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 2, 2000, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 4, 2000, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 8, 2000, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 16, 2000, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 32, 2000, 34, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 64, 2000, 34, 5000000);
-        
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 1, 512, 100, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 2, 512, 100, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 4, 512, 100, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 8, 512, 100, 5000000);
-        System.out.println("\nstarting test " + count++); this.threadTester(b, 16, 512, 100, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 32, 512, 100, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 64, 512, 100, 5000000);
-       
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 1, 1000, 100, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 2, 1000, 100, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 4, 1000, 100, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 8, 1000, 100, 5000000);
-        System.out.println("\nstarting test " + count++); this.threadTester(b, 16, 1000, 100, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 32, 1000, 100, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 64, 1000, 100, 5000000);
-
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 1, 2000, 100, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 2, 2000, 100, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 4, 2000, 100, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 8, 2000, 100, 5000000);
-        System.out.println("\nstarting test " + count++); this.threadTester(b, 16, 2000, 100, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 32, 2000, 100, 5000000);
-    	System.out.println("\nstarting test " + count++); this.threadTester(b, 64, 2000, 100, 5000000);
+        for (z = 0; z < llist_size; z++) {
+            for (y = 0; y < klist_size; y++) {
+                for (x = 0; x < tlist_size; x++) {
+                    System.out.println("\nInitiating test " + count++ + ": threads: " + threads[x]
+                    + ", keysize: " + keysize[y] + ", lookup ratio: " + lookup[z] + "%, with " + numOps + 
+                            " operations.");
+                    this.threadTester(b, threads[x], keysize[y], lookup[z], numOps);
+                }
+            }
+        }
     }
     
     
