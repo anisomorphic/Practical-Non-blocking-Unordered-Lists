@@ -1,4 +1,4 @@
-//package lflist;
+package lflist;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -15,7 +15,7 @@ public class TestDriver {
         
         // configurable options for benchmarking and granularity
     	boolean RUN_BENCHMARKS = true;
-        boolean VERBOSE_BENCHMARKS = true;
+        boolean VERBOSE_BENCHMARKS = false;
         
         TestDriver st = new TestDriver();
         if (st.runUnitTesting()) {
@@ -161,15 +161,15 @@ public class TestDriver {
         // this ensures we are always testing new values, and not repeated values
         int testingValue = 1;
         
-        s.enlist(new Node(testingValue, 0, null, null, Thread.currentThread().getId()));
-        if (!s.contains(testingValue++)) {
+        s.enlist(new Node(2, 0, null, null, Thread.currentThread().getId()));
+        if (!s.contains(2)) {
             nobugs = false;
             System.out.println("contains failed unit test 1 - contains doesn't detect enlisted node");
         }
 
         
-        s.enlist(new Node(testingValue, 0, null, null, Thread.currentThread().getId()));
-        if (!s.contains(testingValue++)) {
+        s.enlist(new Node(64, 0, null, null, Thread.currentThread().getId()));
+        if (!s.contains(64)) {
             nobugs = false;
             System.out.println("contains failed unit test 2 - contains detects deleted node");
         }
@@ -181,18 +181,19 @@ public class TestDriver {
         }
 
         
-        s.remove(testingValue);
-        if (s.contains(testingValue++)) {
+        s.remove(64);
+        if (s.contains(64)) {
             nobugs = false;
             System.out.println("remove failed unit test 4 - remove failure");
         }
 
         
-        s.remove(testingValue);
-        if (s.contains(testingValue++)) {
+        s.remove(2);
+        if (s.contains(2)) {
             nobugs = false;
             System.out.println("remove failed unit test 5 - remove failure");
         }
+
 
         
         
