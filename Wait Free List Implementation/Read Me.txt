@@ -1,0 +1,7 @@
+Practical Non-blocking Unordered Lists
+by Marcus Sooter (Wait-Free) and Michael Harris
+
+Wait-Free Linked List in Java
+
+This version .5 of the wait-free algorithm represents an in-progress work that is not
+yet fully functioning, and needs to be tested further.
