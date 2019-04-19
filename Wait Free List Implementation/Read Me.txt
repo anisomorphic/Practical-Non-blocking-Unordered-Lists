@@ -1,1 +1,14 @@
-.
+Practical Non-blocking Unordered Lists
+by Marcus Sooter and Michael Harris
+
+Wait-Free Linked List in Java
+
+To compile the program at the command line, execute the command
+
+  'javac *.java'
+  
+To run the compiled program, execute the command
+
+  'java TestDriver'
+  
+Verbose benchmarking is on by default and will display information on the terminal window.
