@@ -15,7 +15,7 @@ public class TestDriver {
         
         // configurable options for benchmarking and granularity
     	boolean RUN_BENCHMARKS = true;
-        boolean VERBOSE_BENCHMARKS = false;
+        boolean VERBOSE_BENCHMARKS = true;
         
         TestDriver st = new TestDriver();
         if (st.runUnitTesting()) {
@@ -171,7 +171,7 @@ public class TestDriver {
         s.enlist(new Node(646464, 0, null, null, Thread.currentThread().getId()));
         if (!s.contains(646464)) {
             nobugs = false;
-            System.out.println("contains failed unit test 2 - contains detects deleted node");
+            System.out.println("contains failed unit test 2 - contains doesn't detect enlisted node");
         }
 
         
