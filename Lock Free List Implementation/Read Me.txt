@@ -1,9 +1,0 @@
-Practical Non-blocking Unordered Lists
-Lock-free version 3.0
-By Marcus Sooter and Michael Harris
-
-To compile this program at the command line, use the command 'javac *.java'
-
-To run the compiled program at the command line, use the command 'java TestDriver'
-
-Verbose benchmarking mode is enabled and output will display on the terminal console. 
